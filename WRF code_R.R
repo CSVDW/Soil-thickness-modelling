@@ -43,7 +43,7 @@ ipc_calc = ipc_surv(pmin(trn$D_obs,tau))
 wts = ifelse(trn$D_obs >= tau | trn$delta_obs == 1, 1/ipc_calc, 0)
 
 #Fit random forest model with weights (use defaults for mtry, node size, etc.)
-RF = rfsrc(D_obs~X1+X2+X3, data=trn, case.wt = wts)
+RF = rfsrc(D_obs~X1+X2+X3, data=trn, case.wt = wts, samptype="swr")
 
 #compare with regular model
 RF_regular = rfsrc(D_obs~X1+X2+X3, data=trn)
