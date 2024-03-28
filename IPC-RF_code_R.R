@@ -1,4 +1,4 @@
-#This script shows how to implement the IPC weighted random forest model (WRF)
+#This script shows how to implement the IPC weighted random forest model (IPC-RF)
 #
 #
 #
